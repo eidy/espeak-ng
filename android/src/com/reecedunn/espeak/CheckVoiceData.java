@@ -27,6 +27,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.speech.tts.TextToSpeech.Engine;
 import android.util.Log;
 
@@ -51,7 +52,9 @@ public class CheckVoiceData extends Activity {
     };
 
     public static File getDataPath(Context context) {
-        return new File(context.getDir("voices", MODE_PRIVATE), "espeak-data");
+        // return new File(context.getDir("voices", MODE_PRIVATE), "espeak-data");
+
+        return new File(Environment.getExternalStorageDirectory(), "espeak-data");
     }
 
     public static boolean hasBaseResources(Context context) {
