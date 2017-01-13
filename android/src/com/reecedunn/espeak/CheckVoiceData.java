@@ -51,8 +51,8 @@ public class CheckVoiceData extends Activity {
     };
 
     public static File getDataPath(Context context) {
-        //return new File(context.getDir("voices", MODE_PRIVATE), "espeak-data");
-        return new File(Environment.getExternalStorageDirectory(), "espeak-data");
+        return new File(context.getDir("voices", MODE_PRIVATE), "espeak-data");
+        //return new File(Environment.getExternalStorageDirectory(), "espeak-data");
     }
 
     public static boolean hasBaseResources(Context context) {
